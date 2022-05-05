@@ -1,12 +1,301 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div class="root"></div>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/stories.css">
+  <link rel="stylesheet" href="css/posts.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/bottombar.css">
+
+  <link rel="shortcut icon" href="static/img/instagram-icone-icon-1.png" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="header-content no-mobile">
+      <div class="logo">
+        <img class="logo-img" src="static/img/logo-instagram.svg" alt="">
+        <div class="vertical-border-icon"></div>
+        <img class="logo-name" src="static/img/logo.png" alt="">
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Pesquisar">
+      </div>
+      <div class="header-nav">
+        <ion-icon name="paper-plane-outline"></ion-icon>
+        <ion-icon name="compass-outline"></ion-icon>
+        <ion-icon name="heart-outline"></ion-icon>
+        <ion-icon name="person-outline"></ion-icon>
+      </div>
+    </div>
+    <div class="header-content-mobile">
+      <img class="header-content-mobile-logo" src="static/img/logo-instagram.svg" alt="">
+      <img src="static/img/logo.png" alt="">
+      <ion-icon name="paper-plane-outline"></ion-icon>
+    </div>
+  </header>
+  <div class="conteiner-main">
+    <main>
+      <div class="content">
+        <div class="stories">
+          <div class="story">
+            <div>
+              <img src="static/img/dann.jpeg" alt="">
+            </div>
+            <p>dann</p>
+          </div>
+          <div class="story">
+            <div>
+              <img src="static/img/lele.jpeg" alt="">
+            </div>
+            <p>lele</p>
+          </div>
+          <div class="story">
+            <div>
+              <img src="static/img/bill.jpg" alt="">
+            </div>
+            <p>bill</p>
+          </div>
+          <div class="story">
+            <div>
+              <img src="static/img/filipe.jpeg" alt="">
+            </div>
+            <p>filipe</p>
+          </div>
+          <div class="story">
+            <div>
+              <img src="static/img/guanabara.png" alt="">
+            </div>
+            <p>Guanabara</p>
+          </div>
+          <div class="story">
+            <div>
+              <img src="static/img/Steve_Jobs.jpg" alt="">
+            </div>
+            <p>Jobs</p>
+          </div>
+          <div class="story">
+            <div>
+              <img src="static/img/gabriel.jpg" alt="">
+            </div>
+            <p>Gabriel</p>
+          </div>
+          <div class="story">
+            <div>
+              <img src="static/img/slash.jpeg" alt="">
+            </div>
+            <p>slash</p>
+          </div>
+          <div class="story">
+            <div>
+              <img src="static/img/anonymous.png" alt="">
+            </div>
+            <p>anonymous</p>
+          </div>
+          <div class="story">
+            <div>
+              <img src="static/img/vanessa.jpeg" alt="">
+            </div>
+            <p>vanessa</p>
+          </div>
+          <div class="story">
+            <div>
+              <img src="static/img/myles.webp" alt="">
+            </div>
+            <p>myles</p>
+          </div>
+          <div class="story">
+            <div>
+              <img src="static/img/igor.jpg" alt="">
+            </div>
+            <p>igor</p>
+          </div>
+          <div class="story">
+            <div>
+              <img src="static/img/messi.webp" alt="">
+            </div>
+            <p>messi</p>
+          </div>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+        <div class="posts">
+          <div class="post">
+            <div class="post-header">
+              <div>
+                <img src="static/img/slash.jpeg" alt="">
+                <p>slash</p>
+              </div>
+              <p class="post-header-menu"></p>
+            </div>
+            <div class="post-main">
+              <img src="static/img/slash.jpeg" alt="" class="post-main-media">
+            </div>
+            <div class="post-footer">
+              <div class="action">
+                <div>
+                  <ion-icon name="heart-outline"></ion-icon>
+                  <ion-icon name="chatbubble-outline"></ion-icon>
+                  <ion-icon name="paper-plane-outline"></ion-icon>
+                </div>
+                <ion-icon name="bookmark-outline"></ion-icon>
+              </div>
+              <div class="liked">
+                <img src="static/img/dann.jpeg" alt="">
+                <p>Curtido por <strong>dann</strong> e <strong>outras 300.000 pessoas</strong></p>
+              </div>
+              <div class="comment">
+                <ul class="list-comments"></ul>
+                <div class="comment-add">
+                  <input class="input-comment" type="text" placeholder="Adicione um comentário...">
+                  <button class="button-comment">Publicar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post-header">
+              <div>
+                <img src="static/img/slash.jpeg" alt="">
+                <p>slash</p>
+              </div>
+              <p class="post-header-menu"></p>
+            </div>
+            <div class="post-main">
+              <video class="post-main-media" loop autoplay muted>
+                <source src="static/video/video.mp4" type="video/mp4">
+                <source src="static/video/video.ogv" type="video/ogg">
+              </video>
+            </div>
+            <div class="post-footer">
+              <div class="action">
+                <div>
+                  <ion-icon name="heart-outline"></ion-icon>
+                  <ion-icon name="chatbubble-outline"></ion-icon>
+                  <ion-icon name="paper-plane-outline"></ion-icon>
+                </div>
+                <ion-icon name="bookmark-outline"></ion-icon>
+              </div>
+              <div class="liked">
+                <img src="static/img/dann.jpeg" alt="">
+                <p>Curtido por <strong>dann</strong> e <strong>outras 300.000 pessoas</strong></p>
+              </div>
+              <div class="comment">
+                <ul class="list-comments"></ul>
+                <div class="comment-add">
+                  <input class="input-comment" type="text" placeholder="Adicione um comentário...">
+                  <button class="button-comment">Publicar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <img src="static/img/julio.webp" alt="">
+        <div>
+          <p class="user-name">julioreisdev</p>
+          <p class="name">Júlio</p>
+        </div>
+      </div>
+      <div class="sidebar-content">
+        <div class="sidebar-content-title">
+          <p>Sugestões para você</p>
+          <p>Ver tudo</p>
+        </div>
+        <div class="sidebar-content-sugestion">
+          <img src="static/img/diolinux-logo.png" alt="">
+          <div class="sidebar-content-sugestion-names">
+            <div>
+              <p>diolinux</p>
+              <p class="sugestion-status">Segue você</p>
+            </div>
+            <p class="sugestion-action">Seguir</p>
+          </div>
+        </div>
+        <div class="sidebar-content-sugestion">
+          <img src="static/img/mark.jpg" alt="">
+          <div class="sidebar-content-sugestion-names">
+            <div>
+              <p>mark</p>
+              <p class="sugestion-status">Segue você</p>
+            </div>
+            <p class="sugestion-action">Seguir</p>
+          </div>
+        </div>
+        <div class="sidebar-content-sugestion">
+          <img src="static/img/messi.webp" alt="">
+          <div class="sidebar-content-sugestion-names">
+            <div>
+              <p>messii</p>
+              <p class="sugestion-status">Novo no Instagram</p>
+            </div>
+            <p class="sugestion-action">Seguir</p>
+          </div>
+        </div>
+        <div class="sidebar-content-sugestion">
+          <img src="static/img/vanessa.jpeg" alt="">
+          <div class="sidebar-content-sugestion-names">
+            <div>
+              <p>va.nessaa</p>
+              <p class="sugestion-status">Novo no Instagram</p>
+            </div>
+            <p class="sugestion-action">Seguir</p>
+          </div>
+        </div>
+        <div class="sidebar-content-sugestion">
+          <img src="static/img/igor.jpg" alt="">
+          <div class="sidebar-content-sugestion-names">
+            <div>
+              <p>igorprog.br</p>
+              <p class="sugestion-status">Novo no Instagram</p>
+            </div>
+            <p class="sugestion-action">Seguir</p>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-footer">
+        <div>
+          <a href="#">Sobre</a>
+          <a href="#">Ajuda</a>
+          <a href="#">Imprensa</a>
+          <a href="#">API</a>
+          <a href="#">Carreiras</a>
+          <a href="#">Privacidade</a>
+          <a href="#">Termos</a>
+          <a href="#">Localizações</a>
+          <a href="#">Contas mais relevantes</a>
+          <a href="#">Hashtags</a>
+          <a href="#">Idiomas</a>
+        </div>
+        <p>&copy;2021 INSTAGRAM DO FACEBOOK</p>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-bar">
+    <ion-icon name="home"></ion-icon>
+    <ion-icon name="search-outline"></ion-icon>
+    <ion-icon name="add-circle-outline"></ion-icon>
+    <ion-icon name="heart-outline"></ion-icon>
+    <ion-icon name="person-outline"></ion-icon>
+  </div>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <script src="comment.js"></script>
+</body>
+
 </html>

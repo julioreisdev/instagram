@@ -1,0 +1,83 @@
+.stories {
+  width: 100%;
+  border: 1px solid #DBDBDB;
+  background-color: #fff;
+  padding: 0.5rem 11px;
+  display: flex;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.story {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.story:hover {
+  cursor: pointer;
+}
+
+.story:not(:last-child) {
+  margin: 0 11px 0 0;
+}
+
+.story div {
+  width: 60px;
+  height: 60px;
+  background-image: url('../static/img/stories_background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story img {
+  width: 54px;
+  border-radius: 50%;
+}
+
+.story p {
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.stories ion-icon {
+  position: absolute;
+  right: 8px;
+  bottom: 38px;
+  padding: 3px;
+  color: gray;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.stories ion-icon:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 614px) {
+  .stories {
+    background-color: #fdfbfb;
+    border: none;
+    margin-top: 1rem;
+  }
+
+  .story div {
+    width: 50px;
+    height: 50px;
+  }
+  .story img {
+    width: 44px;
+  }
+
+  .stories ion-icon {
+    display: none;
+  }
+
+}

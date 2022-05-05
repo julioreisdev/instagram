@@ -1,0 +1,145 @@
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.posts, .post {
+  width: 100%;
+}
+
+.post {
+  background-color: #fff;
+  margin-top: calc(88px - 53px);
+  margin-bottom: calc(88px - 53px);
+  border: 1px solid #DBDBDB;
+}
+
+/*  */
+
+.post-header {
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-header div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.post-header img {
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.post-header p {
+  font-weight: bold;
+}
+
+.post-header-menu {
+  font-size: 1.2rem;
+}
+
+.post-header-menu:before {
+  content: "...";
+}
+
+.post-header div, .post-header p:hover {
+  cursor: pointer;
+}
+
+/*  */
+
+.post-main-media {
+  width: 100%;
+}
+
+/*  */
+
+.post-footer {
+  padding: 0.75rem;
+}
+
+.post-footer .action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-footer ion-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.post-footer ion-icon:hover {
+  cursor: pointer;
+}
+
+.post-footer .liked {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.liked img {
+  width: 30px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.comment-add {
+  width: 100%;
+  margin: 1rem 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-add input {
+  width: 75%;
+  border: none;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+
+.comment-add button {
+  width: 20%;
+  border: none;
+  font-size: 1rem;
+  color: #B2DFFC;
+  transition: 300ms;
+}
+
+.comment-add button:hover {
+  color: #0095F6;
+  cursor: pointer;
+}
+
+.list-comments {
+  margin: 1rem 0 0 0.5rem;
+}
+
+.list-comments li {
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid rgb(226, 226, 226);
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-comments li:before {
+  content: "julioreisdev";
+}
+
+.list-comments li:after {
+  content: "\2661";
+}
+
+/*  */
+
+@media (max-width: 614px) {
+}
