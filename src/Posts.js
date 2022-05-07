@@ -1,3 +1,5 @@
+import React from "react";
+
 function PostHeader(props) {
   return (
     <div className="post-header">
@@ -11,19 +13,75 @@ function PostHeader(props) {
 }
 
 function PostMain(props) {
+  const [likedNow, setLikedNow] = React.useState(false);
+
+  const [iconLike, setIconLike] = React.useState(
+    <ion-icon name="heart-outline"></ion-icon>
+  );
+  function liked() {
+
+    setLikedNow(true);
+
+    setIconLike(
+      <img
+        className="img-liked"
+        src="static/img/Heart-Shadow-icon.png"
+        alt=""
+      />
+    );
+  }
+
+  function deslikeButton() {
+
+    setLikedNow(false);
+
+    setIconLike(
+      <ion-icon name="heart-outline"></ion-icon>
+    );
+  }
+
+  function likedButton() {
+
+    setLikedNow(true);
+
+    setIconLike(
+      <img
+        className="img-liked"
+        src="static/img/Heart-Shadow-icon.png"
+        alt=""
+      />
+    );
+  }
+
+  function likedButtonRun() {
+    if (likedNow === false) {
+      likedButton();
+    } else {
+      deslikeButton();
+    }
+  }
+
   return (
-    <div className="post-main">
-      <img src={props.imagePost} alt="" className="post-main-media" />
+    <div>
+      <div className="post-main">
+        <img
+          onClick={liked}
+          src={props.imagePost}
+          alt=""
+          className="post-main-media"
+        />
+      </div>
+      <PostFooter function={likedButtonRun} icon={iconLike} />
     </div>
   );
 }
 
-function PostFooter() {
+function PostFooter(props) {
   return (
     <div className="post-footer">
       <div className="action">
         <div>
-          <ion-icon name="heart-outline"></ion-icon>
+          <span onClick={props.function}>{props.icon}</span>
           <ion-icon name="chatbubble-outline"></ion-icon>
           <ion-icon name="paper-plane-outline"></ion-icon>
         </div>
@@ -56,7 +114,6 @@ function Post(object) {
     <div className="post">
       <PostHeader userName={object.userName} image={object.image} />
       <PostMain imagePost={object.imagePost} />
-      <PostFooter />
     </div>
   );
 }

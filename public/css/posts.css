@@ -91,6 +91,11 @@
   border-radius: 50%;
 }
 
+.img-liked {
+  width: 18px;
+  margin-right: 10px;
+}
+
 .comment-add {
   width: 100%;
   margin: 1rem 0 0 0;
