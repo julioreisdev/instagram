@@ -1,10 +1,10 @@
-function Story(object) {
+function Story({userName, image}) {
   return (
     <div className="story">
       <div>
-        <img src={object.image} alt="" />
+        <img src={image} alt="" />
       </div>
-      <p>{object.userName}</p>
+      <p>{userName}</p>
     </div>
   );
 }

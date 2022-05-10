@@ -1,23 +1,23 @@
-function SidebarHeader(props) {
+function SidebarHeader({name, userName, image}) {
   return (
     <div className="sidebar-header">
-      <img src={props.image} alt="" />
+      <img src={image} alt="" />
       <div>
-        <p className="user-name">{props.userName}</p>
-        <p className="name">{props.name}</p>
+        <p className="user-name">{userName}</p>
+        <p className="name">{name}</p>
       </div>
     </div>
   );
 }
 
-function SidebarMainSugestion(props) {
+function SidebarMainSugestion({name, image, status}) {
   return (
     <div class="sidebar-content-sugestion">
-      <img src={props.image} alt="" />
+      <img src={image} alt="" />
       <div class="sidebar-content-sugestion-names">
         <div>
-          <p>{props.name}</p>
-          <p class="sugestion-status">{props.status}</p>
+          <p>{name}</p>
+          <p class="sugestion-status">{status}</p>
         </div>
         <p class="sugestion-action">Seguir</p>
       </div>

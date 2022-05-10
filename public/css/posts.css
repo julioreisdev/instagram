@@ -53,7 +53,7 @@
 
 /*  */
 
-.post-main-media {
+.post-main-media, video {
   width: 100%;
 }
 

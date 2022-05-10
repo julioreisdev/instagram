@@ -1,18 +1,18 @@
 import React from "react";
 
-function PostHeader(props) {
+function PostHeader({userName, image}) {
   return (
     <div className="post-header">
       <div>
-        <img src={props.image} alt={props.userName} />
-        <p>{props.userName}</p>
+        <img src={image} alt={userName} />
+        <p>{userName}</p>
       </div>
       <p className="post-header-menu"></p>
     </div>
   );
 }
 
-function PostMain(props) {
+function PostMain({imagePost, type}) {
   const [likedNow, setLikedNow] = React.useState(false);
 
   const [iconLike, setIconLike] = React.useState(
@@ -64,24 +64,33 @@ function PostMain(props) {
   return (
     <div>
       <div className="post-main">
-        <img
-          onClick={liked}
-          src={props.imagePost}
+        {
+          type === "image"
+          ? 
+          <img
+          onDoubleClick={liked}
+          src={imagePost}
           alt=""
-          className="post-main-media"
-        />
+          className="post-main-media"/>
+          : 
+          <video muted autoPlay loop>
+            <source src={imagePost} type="video/mp4" />
+            <source src={imagePost} type="video/ogg" />
+          </video>
+        }
+        
       </div>
-      <PostFooter function={likedButtonRun} icon={iconLike} />
+      <PostFooter functio={likedButtonRun} icon={iconLike} />
     </div>
   );
 }
 
-function PostFooter(props) {
+function PostFooter({functio, icon}) {
   return (
     <div className="post-footer">
       <div className="action">
         <div>
-          <span onClick={props.function}>{props.icon}</span>
+          <span onClick={functio}>{icon}</span>
           <ion-icon name="chatbubble-outline"></ion-icon>
           <ion-icon name="paper-plane-outline"></ion-icon>
         </div>
@@ -109,11 +118,11 @@ function PostFooter(props) {
   );
 }
 
-function Post(object) {
+function Post({userName, imagePost, image, type}) {
   return (
     <div className="post">
-      <PostHeader userName={object.userName} image={object.image} />
-      <PostMain imagePost={object.imagePost} />
+      <PostHeader userName={userName} image={image} />
+      <PostMain imagePost={imagePost} type={type} />
     </div>
   );
 }
@@ -123,11 +132,19 @@ const postData = [
     userName: "slash",
     image: "/static/img/slash.jpeg",
     imagePost: "/static/img/slash.jpeg",
+    type: "image"
   },
   {
     userName: "dann",
     image: "/static/img/dann.jpeg",
     imagePost: "/static/img/dann.jpeg",
+    type: "image"
+  },
+  {
+    userName: "dann",
+    image: "/static/img/dann.jpeg",
+    imagePost: "/static/video/video.ogv",
+    type: "video"
   },
 ];
 
